@@ -31,15 +31,21 @@
       margin: 1rem 0;
     }
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
+    nav button {
+      background: none;
+      border: 2px solid #4CAF50;
       color: #4CAF50;
       font-weight: bold;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav button:hover {
+      background-color: #4CAF50;
+      color: white;
     }
 
     main {
@@ -73,9 +79,9 @@
     }
 
     @media (max-width: 600px) {
-      nav a {
+      nav button {
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.5rem auto;
       }
     }
   </style>
@@ -87,27 +93,67 @@
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('contact')">Contact</button>
   </nav>
 
-  <main>
-    <article>
-      <h2>Project Title 1</h2>
-      <p>Write a short description of your project here. You can include objectives, methodology, and any interesting insights you gained during the process.</p>
-    </article>
+  <main id="content">
+    <!-- Home Section -->
+    <div id="home">
+      <article>
+        <h2>Welcome to My Blog</h2>
+        <p>This is the homepage. Here you can explore my school projects and learn more about my work.</p>
+      </article>
+    </div>
 
-    <article>
-      <h2>Project Title 2</h2>
-      <p>Another project summary goes here. Keep it clean and concise. Add images or code snippets if necessary.</p>
-    </article>
+    <!-- Projects Section -->
+    <div id="projects" style="display:none;">
+      <article>
+        <h2>Project 1: Example Project</h2>
+        <p>Short description of your first project. Include objectives, methods, and results.</p>
+      </article>
+      <article>
+        <h2>Project 2: Another Project</h2>
+        <p>Brief summary of the second project. Add any images, code snippets, or links if necessary.</p>
+      </article>
+      <!-- Add more projects here -->
+    </div>
+
+    <!-- About Section -->
+    <div id="about" style="display:none;">
+      <article>
+        <h2>About Me</h2>
+        <p>Write a short bio about yourself, your interests, and your school work here.</p>
+      </article>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" style="display:none;">
+      <article>
+        <h2>Contact</h2>
+        <p>Email: example@example.com</p>
+        <p>You can also link to your social media or school portfolio here.</p>
+      </article>
+    </div>
   </main>
 
   <footer>
     &copy; 2026 My School Project Blog
   </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('#content > div');
+      sections.forEach(sec => sec.style.display = 'none');
+
+      // Show the selected section
+      const selected = document.getElementById(sectionId);
+      if (selected) selected.style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
