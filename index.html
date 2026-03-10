@@ -108,15 +108,68 @@
       </article>
     </div>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (modified to be a table with download links) -->
     <div id="projects" style="display:none;">
       <article>
-        <h2>Project 1: Example Project</h2>
-        <p>Short description of your first project. Include objectives, methods, and results.</p>
-      </article>
-      <article>
-        <h2>Project 2: Another Project</h2>
-        <p>Brief summary of the second project. Add any images, code snippets, or links if necessary.</p>
+        <h2>Projets & Interviews</h2>
+
+        <!-- Table: left = name, right = download link -->
+        <table class="projects-table" aria-describedby="projects-desc">
+          <caption id="projects-desc" style="display:none;">Liste des projets avec liens de téléchargement des PDFs</caption>
+          <thead>
+            <tr>
+              <th>Nom du projet / Interview</th>
+              <th style="text-align:right;">Télécharger</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="project-name">Interview — Alice Dupont</td>
+              <td class="project-action">
+                <!-- 'download' attribute suggests filename; ensure the PDF is on same origin -->
+                <a class="download-btn" href="pdfs/interview-alice-dupont.pdf" download="Interview_Alice_Dupont.pdf" aria-label="Télécharger Interview Alice Dupont en PDF">
+                  <!-- simple inline SVG icon -->
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Télécharger PDF
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="project-name">Projet — Prototype Final</td>
+              <td class="project-action">
+                <a class="download-btn" href="pdfs/prototype-final.pdf" download="Prototype_Final.pdf" aria-label="Télécharger Prototype Final en PDF">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Télécharger PDF
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="project-name">Étude — Méthodes et Résultats</td>
+              <td class="project-action">
+                <a class="download-btn" href="pdfs/etude-methodes-resultats.pdf" download="Etude_Methodes_Resultats.pdf" aria-label="Télécharger l'étude en PDF">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Télécharger PDF
+                </a>
+              </td>
+            </tr>
+
+            <!-- Add or duplicate rows as needed -->
+          </tbody>
+        </table>
       </article>
     </div>
 
