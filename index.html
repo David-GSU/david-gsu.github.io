@@ -155,7 +155,12 @@
     grid-template-columns: 1fr;
   }
 }
-
+.prototype-video{
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
 @media (max-width: 600px) {
   .interview-grid {
     grid-template-columns: 1fr;
@@ -172,9 +177,9 @@
   <nav>
     <button onclick="showSection('home')">Présentation</button>
     <button onclick="showSection('projects')">Interviews</button>
-    <button onclick="showSection('persona')">Persona</button>
+    <button onclick="showSection('persona')">Personas</button>
     <button onclick="showSection('about')">Idées</button>
-    <button onclick="showSection('contact')">Prototype final</button>
+    <button onclick="showSection('contact')">Prototype</button>
   </nav>
 
   <main id="content">
@@ -287,15 +292,17 @@
   </article>
 </div>
 
-    <!-- Contact Section -->
-    <div id="contact" style="display:none;">
-      <article>
-        <h2>Contact</h2>
-        <p>Email: example@example.com</p>
-        <p>You can also link to your social media or school portfolio here.</p>
-      </article>
-    </div>
-  </main>
+ <div id="contact" style="display:none;">
+  <article>
+    <h2>Prototype</h2>
+
+    <video controls class="prototype-video">
+      <source src="video/prototype.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </article>
+</div>
 
   <footer>
     &copy; Le groupe de Musique
