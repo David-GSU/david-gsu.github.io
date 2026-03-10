@@ -84,6 +84,40 @@
         margin: 0.5rem auto;
       }
     }
+    .interview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.interview-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+
+  height: 90px;
+  border-radius: 20px;
+
+  border: 2px solid #4CAF50;
+  color: #333;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.interview-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .interview-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -111,65 +145,18 @@
     <!-- Projects Section (modified to be a table with download links) -->
     <div id="projects" style="display:none;">
       <article>
-        <h2>Projets & Interviews</h2>
+        <h2>Interviews</h2>
 
-        <!-- Table: left = name, right = download link -->
-        <table class="projects-table" aria-describedby="projects-desc">
-          <caption id="projects-desc" style="display:none;">Liste des projets avec liens de téléchargement des PDFs</caption>
-          <thead>
-            <tr>
-              <th>Nom du projet / Interview</th>
-              <th style="text-align:right;">Télécharger</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="project-name">Interview — Alice Dupont</td>
-              <td class="project-action">
-                <!-- 'download' attribute suggests filename; ensure the PDF is on same origin -->
-                <a class="download-btn" href="pdfs/interview-alice-dupont.pdf" download="Interview_Alice_Dupont.pdf" aria-label="Télécharger Interview Alice Dupont en PDF">
-                  <!-- simple inline SVG icon -->
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Télécharger PDF
-                </a>
-              </td>
-            </tr>
+        <div class="interview-grid">
+          <a href="pdfs/maxence1.pdf" download class="interview-btn">Maxence :<br>Interview 1</a>
+          <a href="pdfs/maxence2.pdf" download class="interview-btn">Maxence :<br>Interview 2</a>
 
-            <tr>
-              <td class="project-name">Projet — Prototype Final</td>
-              <td class="project-action">
-                <a class="download-btn" href="pdfs/prototype-final.pdf" download="Prototype_Final.pdf" aria-label="Télécharger Prototype Final en PDF">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Télécharger PDF
-                </a>
-              </td>
-            </tr>
+          <a href="pdfs/khaoula1.pdf" download class="interview-btn">Khaoula :<br>Interview 1</a>
+          <a href="pdfs/khaoula2.pdf" download class="interview-btn">Khaoula :<br>Interview 2</a>
 
-            <tr>
-              <td class="project-name">Étude — Méthodes et Résultats</td>
-              <td class="project-action">
-                <a class="download-btn" href="pdfs/etude-methodes-resultats.pdf" download="Etude_Methodes_Resultats.pdf" aria-label="Télécharger l'étude en PDF">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Télécharger PDF
-                </a>
-              </td>
-            </tr>
+          <a href="pdfs/marc1.pdf" download class="interview-btn">Marc :<br>Interview 1</a>
+        </div>
 
-            <!-- Add or duplicate rows as needed -->
-          </tbody>
-        </table>
       </article>
     </div>
 
