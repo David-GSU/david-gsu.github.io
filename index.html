@@ -112,6 +112,24 @@
   background-color: #4CAF50;
   color: white;
 }
+.brainstorming-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.brainstorming-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 600px) {
+  .brainstorming-gallery {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 600px) {
   .interview-grid {
@@ -160,11 +178,17 @@
 
     <!-- About Section -->
     <div id="about" style="display:none;">
-      <article>
-        <h2>About Me</h2>
-        <p>Write a short bio about yourself, your interests, and your school work here.</p>
-      </article>
+  <article>
+    <h2>Brainstorming</h2>
+    <p>Voici quelques images de notre séance de brainstorming.</p>
+
+    <div class="brainstorming-gallery">
+      <img src="brainstorming/1.jpg" alt="Brainstorming 1">
+      <img src="brainstorming/2.jpg" alt="Brainstorming 2">
     </div>
+
+  </article>
+</div>
 
     <!-- Contact Section -->
     <div id="contact" style="display:none;">
