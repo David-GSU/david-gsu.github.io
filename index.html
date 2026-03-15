@@ -118,6 +118,11 @@
   margin-bottom:10px;
 }
 
+#interaction h3{
+  margin-top:20px;
+  color:#4CAF50;
+}
+
 .resource{
   display:flex;
   align-items:center;
@@ -177,6 +182,7 @@
   <nav>
     <button onclick="showSection('home')">Présentation</button>
     <button onclick="showSection('projects')">Interviews</button>
+    <button onclick="showSection('interaction')">Interaction Points</button>
     <button onclick="showSection('persona')">Personas</button>
     <button onclick="showSection('about')">Idées</button>
     <button onclick="showSection('contact')">Prototype</button>
@@ -206,6 +212,45 @@
 
       </article>
     </div>
+
+    <div id="interaction" style="display:none;">
+  <article>
+    <h2>Interaction Points</h2>
+
+    <p>
+      Après analyse des interviews, nous avons identifié plusieurs moments clés
+      dans lesquels les utilisateurs rencontrent des difficultés lorsqu'ils
+      apprennent à jouer d'un instrument.
+    </p>
+
+    <h3>1. Mauvaise position des doigts</h3>
+    <p>
+      Lors de l'apprentissage d'un accord, l'utilisateur place ses doigts en
+      suivant une vidéo ou une tablature. Cependant, il arrive souvent qu'un
+      doigt touche une corde en trop, ce qui empêche le son de sortir
+      correctement. L'utilisateur doit alors recommencer plusieurs fois avant
+      de comprendre l'erreur.
+    </p>
+
+    <h3>2. Apprentissage avec des vidéos</h3>
+    <p>
+      Beaucoup d'utilisateurs apprennent à l'aide de vidéos en ligne. Cependant,
+      certains gestes techniques sont difficiles à comprendre car les angles de
+      caméra ne montrent pas toujours clairement le mouvement des doigts.
+      L'utilisateur doit alors regarder plusieurs vidéos pour réussir à
+      reproduire le geste.
+    </p>
+
+    <h3>3. Absence de feedback</h3>
+    <p>
+      Les musiciens autodidactes pratiquent souvent seuls. Lorsqu'ils jouent,
+      ils ne savent pas toujours si leur position est correcte et personne ne
+      corrige leurs erreurs. Cela ralentit l'apprentissage et peut créer de la
+      frustration.
+    </p>
+
+  </article>
+</div>
     <div id="persona" style="display:none;">
   <article>
     <h2>Personas</h2>
@@ -295,7 +340,11 @@
  <div id="contact" style="display:none;">
   <article>
     <h2>Prototype</h2>
-    <p>Voici la vidéo prototype de notre concept, Larry, des gants connectés permettant de jouer d'un instrument de musique.</p>
+    <p>
+    Voici la vidéo prototype de notre concept : LARRY, un gant connecté
+    capable de détecter la position des doigts et de fournir un feedback
+    tactile pour aider les musiciens à corriger leurs erreurs pendant la pratique.
+    </p>
     <video controls class="prototype-video">
       <source src="prototype/prototype.mp4" type="video/mp4">
       Your browser does not support the video tag.
