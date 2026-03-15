@@ -300,6 +300,21 @@ footer {
   .resource span {
     width: auto;
   }
+
+  .next-section-btn{
+  background:#4CAF50;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.next-section-btn:hover{
+  background:#3e9442;
+}
 }
   </style>
 </head>
@@ -499,8 +514,20 @@ footer {
       </div>
 
     </div>
+    <p style="margin-top:30px; text-align:center;">
+  À partir de ces interviews, nous avons identifié plusieurs
+  <strong>interaction points</strong> représentant des moments
+  clés où les utilisateurs rencontrent des difficultés pendant
+  leur pratique musicale.
+</p>
 
+<div style="text-align:center; margin-top:15px;">
+  <button class="next-section-btn" onclick="showSection('interaction')">
+Voir les Interaction Points
+</button>
+</div>
   </article>
+  
 </div>
 
     <div id="interaction" style="display:none;">
